@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impen Tech — Atlas for byggevarehandelen</title>
+<meta name="description" content="Impen Tech utvikler Atlas, en digital assistent for ansatte i byggevarehandelen.">
+<style>
+  :root {
+    --bla: #1340a8;
+    --bla-mork: #0c2c78;
+    --linje: rgba(255, 255, 255, 0.10);
+    --tekst: #1b2433;
+    --dempet: #5a6577;
+    --flate: #ffffff;
+    --gul: #ffd23f;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--tekst);
+    background-color: var(--bla);
+    background-image:
+      linear-gradient(var(--linje) 1px, transparent 1px),
+      linear-gradient(90deg, var(--linje) 1px, transparent 1px);
+    background-size: 32px 32px;
+    line-height: 1.55;
+    min-height: 100vh;
+  }
+  .ramme { max-width: 880px; margin: 0 auto; padding: 48px 16px 32px; }
+  header { display: flex; align-items: center; gap: 14px; color: #fff; margin-bottom: 32px; }
+  .merke {
+    width: 44px; height: 44px; border-radius: 10px; background: var(--gul);
+    display: grid; place-items: center; font-weight: 800; color: var(--bla-mork); font-size: 22px;
+  }
+  header strong { font-size: 22px; letter-spacing: 0.2px; }
+  .kort {
+    background: var(--flate); border-radius: 16px; padding: 36px 32px;
+    box-shadow: 0 18px 50px rgba(5, 20, 60, 0.35);
+  }
+  h1 { font-size: clamp(26px, 4.5vw, 38px); line-height: 1.2; margin-bottom: 14px; color: var(--bla-mork); }
+  .ingress { font-size: 18px; color: var(--dempet); max-width: 640px; }
+  h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--bla); margin: 32px 0 12px; }
+  .punkter { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .punkt { border: 1px solid #e3e8f2; border-radius: 12px; padding: 16px; }
+  .punkt b { display: block; margin-bottom: 4px; }
+  .punkt span { color: var(--dempet); font-size: 15px; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; }
+  dt { color: var(--dempet); }
+  dd a { color: var(--bla); }
+  footer { color: rgba(255, 255, 255, 0.75); font-size: 13px; text-align: center; margin-top: 24px; }
+  @media (max-width: 520px) {
+    .kort { padding: 26px 20px; }
+    dl { grid-template-columns: 1fr; gap: 0; }
+    dd { margin-bottom: 10px; }
+  }
+</style>
+</head>
+<body>
+  <div class="ramme">
+    <header>
+      <div class="merke" aria-hidden="true">A</div>
+      <strong>Impen Tech</strong>
+    </header>
+
+    <main class="kort">
+      <h1>Atlas — en digital assistent for byggevarehandelen</h1>
+      <p class="ingress">
+        Impen Tech utvikler Atlas, et verktøy som hjelper ansatte i byggevarebutikker å finne riktig vare,
+        svare kunder presist og planlegge prosjekter — på nett og på iPhone.
+      </p>
+
+      <h2>Hva Atlas gjør</h2>
+      <div class="punkter">
+        <div class="punkt"><b>Finn riktig vare</b><span>Søk på navn, varenummer eller strekkode i en produktkatalog med hundretusener av byggevarer.</span></div>
+        <div class="punkt"><b>Produktinformasjon</b><span>Mål, varianter, dokumentasjon og datablad samlet på ett sted.</span></div>
+        <div class="punkt"><b>Planlegg rommet</b><span>Visualiser rom med faktiske varer og få materialliste med mengder.</span></div>
+      </div>
+
+      <h2>Kontakt</h2>
+      <dl>
+        <dt>Selskap</dt><dd>Impen Tech AS</dd>
+        <dt>Org.nr.</dt><dd>937 984 626</dd>
+        <dt>Adresse</dt><dd>Meåsvegen 9, 3840 Seljord</dd>
+        <dt>E-post</dt><dd><a href="mailto:post@impentech.onmicrosoft.com">post@impentech.onmicrosoft.com</a></dd>
+      </dl>
+    </main>
+
+    <footer>© 2026 Impen Tech AS</footer>
+  </div>
+</body>
+</html>
