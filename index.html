@@ -3,91 +3,216 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Impen Tech — Atlas for byggevarehandelen</title>
-<meta name="description" content="Impen Tech utvikler Atlas, en digital assistent for ansatte i byggevarehandelen.">
-<style>
-  :root {
-    --bla: #1340a8;
-    --bla-mork: #0c2c78;
-    --linje: rgba(255, 255, 255, 0.10);
-    --tekst: #1b2433;
-    --dempet: #5a6577;
-    --flate: #ffffff;
-    --gul: #ffd23f;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: var(--tekst);
-    background-color: var(--bla);
-    background-image:
-      linear-gradient(var(--linje) 1px, transparent 1px),
-      linear-gradient(90deg, var(--linje) 1px, transparent 1px);
-    background-size: 32px 32px;
-    line-height: 1.55;
-    min-height: 100vh;
-  }
-  .ramme { max-width: 880px; margin: 0 auto; padding: 48px 16px 32px; }
-  header { display: flex; align-items: center; gap: 14px; color: #fff; margin-bottom: 32px; }
-  .merke {
-    width: 44px; height: 44px; border-radius: 10px; background: var(--gul);
-    display: grid; place-items: center; font-weight: 800; color: var(--bla-mork); font-size: 22px;
-  }
-  header strong { font-size: 22px; letter-spacing: 0.2px; }
-  .kort {
-    background: var(--flate); border-radius: 16px; padding: 36px 32px;
-    box-shadow: 0 18px 50px rgba(5, 20, 60, 0.35);
-  }
-  h1 { font-size: clamp(26px, 4.5vw, 38px); line-height: 1.2; margin-bottom: 14px; color: var(--bla-mork); }
-  .ingress { font-size: 18px; color: var(--dempet); max-width: 640px; }
-  h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--bla); margin: 32px 0 12px; }
-  .punkter { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
-  .punkt { border: 1px solid #e3e8f2; border-radius: 12px; padding: 16px; }
-  .punkt b { display: block; margin-bottom: 4px; }
-  .punkt span { color: var(--dempet); font-size: 15px; }
-  dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; }
-  dt { color: var(--dempet); }
-  dd a { color: var(--bla); }
-  footer { color: rgba(255, 255, 255, 0.75); font-size: 13px; text-align: center; margin-top: 24px; }
-  @media (max-width: 520px) {
-    .kort { padding: 26px 20px; }
-    dl { grid-template-columns: 1fr; gap: 0; }
-    dd { margin-bottom: 10px; }
-  }
-</style>
+<title>Impen Tech — Atlas, digital assistent for byggevarehandelen</title>
+<meta name="description" content="Impen Tech AS utvikler Atlas: en digital assistent som hjelper ansatte i byggevarehandelen å finne riktig vare blant over 760 000 byggevarer, regne mengder og vise rommet i Atlas Studio.">
+<link rel="canonical" href="https://impentech.no/">
+<link rel="alternate" hreflang="nb" href="https://impentech.no/">
+<link rel="alternate" hreflang="en" href="https://impentech.no/en/">
+<link rel="alternate" hreflang="x-default" href="https://impentech.no/">
+<meta name="theme-color" content="#0c2c78">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Impen Tech">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:title" content="Impen Tech — Atlas, digital assistent for byggevarehandelen">
+<meta property="og:description" content="Impen Tech AS utvikler Atlas: en digital assistent som hjelper ansatte i byggevarehandelen å finne riktig vare blant over 760 000 byggevarer, regne mengder og vise rommet i Atlas Studio.">
+<meta property="og:url" content="https://impentech.no/">
+<meta property="og:image" content="https://impentech.no/assets/img/og-bilde.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Atlas — digital assistent for byggevarehandelen">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/menu.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Impen Tech AS","url":"https://impentech.no/","logo":"https://impentech.no/assets/img/app-ikon-512.png","email":"post@impentech.onmicrosoft.com","identifier":"937984626","address":{"@type":"PostalAddress","streetAddress":"Meåsvegen 9","postalCode":"3840","addressLocality":"Seljord","addressCountry":"NO"}}</script>
 </head>
 <body>
-  <div class="ramme">
-    <header>
-      <div class="merke" aria-hidden="true">A</div>
-      <strong>Impen Tech</strong>
-    </header>
-
-    <main class="kort">
-      <h1>Atlas — en digital assistent for byggevarehandelen</h1>
-      <p class="ingress">
-        Impen Tech utvikler Atlas, et verktøy som hjelper ansatte i byggevarebutikker å finne riktig vare,
-        svare kunder presist og planlegge prosjekter — på nett og på iPhone.
-      </p>
-
-      <h2>Hva Atlas gjør</h2>
-      <div class="punkter">
-        <div class="punkt"><b>Finn riktig vare</b><span>Søk på navn, varenummer eller strekkode i en produktkatalog med hundretusener av byggevarer.</span></div>
-        <div class="punkt"><b>Produktinformasjon</b><span>Mål, varianter, dokumentasjon og datablad samlet på ett sted.</span></div>
-        <div class="punkt"><b>Planlegg rommet</b><span>Visualiser rom med faktiske varer og få materialliste med mengder.</span></div>
-      </div>
-
-      <h2>Kontakt</h2>
-      <dl>
-        <dt>Selskap</dt><dd>Impen Tech AS</dd>
-        <dt>Org.nr.</dt><dd>937 984 626</dd>
-        <dt>Adresse</dt><dd>Meåsvegen 9, 3840 Seljord</dd>
-        <dt>E-post</dt><dd><a href="mailto:post@impentech.onmicrosoft.com">post@impentech.onmicrosoft.com</a></dd>
-      </dl>
-    </main>
-
-    <footer>© 2026 Impen Tech AS</footer>
+<a class="skip-link" href="#innhold">Hopp til innholdet</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="1" y="1" width="38" height="38" rx="10" fill="#fff"/><path d="M9 15V9h6M31 25v6h-6" fill="none" stroke="#1340a8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="17" y="11" width="6" height="18" rx="1.5" fill="#0c2c78"/><circle cx="29.5" cy="10.5" r="2.6" fill="#ffd23f"/></svg>
+      <span class="brand__text"><span class="brand__name">Impen Tech</span><span class="brand__sub">Atlas for byggevarehandelen</span></span>
+    </a>
+    <nav class="nav" aria-label="Hovedmeny"><a href="/atlas/">Atlas</a><a href="/studio/">Atlas Studio</a><a href="/om/">Om oss</a><a href="/support/">Support</a><a href="/kontakt/">Kontakt</a></nav>
+    <a class="lang" href="/en/" hreflang="en" lang="en" aria-label="EN – Read this page in English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>EN</span></a>
+    <a class="btn btn--yellow btn--sm header-cta" href="/kontakt/">Ta kontakt</a>
+    <details class="menu">
+      <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Meny</span></summary>
+      <nav class="menu__panel" aria-label="Hovedmeny"><a href="/atlas/">Atlas</a><a href="/studio/">Atlas Studio</a><a href="/om/">Om oss</a><a href="/support/">Support</a><a href="/kontakt/">Kontakt</a><a href="/personvern/">Personvern</a></nav>
+    </details>
   </div>
+</header>
+<main id="innhold" tabindex="-1">
+<section class="hero hero--home blueprint">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow reveal">Impen Tech AS · Atlas</p>
+      <h1 class="reveal">Riktig vare og riktig mengde — <em>rett ved disken.</em></h1>
+      <p class="lede reveal">Atlas er en digital assistent for ansatte i byggevarehandelen. Den forstår kundens prosjekt, finner varene blant over 760&nbsp;000 byggevarer og regner ut mengder og pakninger.</p>
+      <div class="actions reveal">
+        <a class="btn btn--yellow" href="/atlas/">Se hva Atlas gjør<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--ghost" href="/kontakt/">Ta kontakt</a>
+      </div>
+      <p class="hero-meta reveal">Produktdata fra NOBB<span aria-hidden="true"> · </span>Nett nå, iPhone-app kommer<span aria-hidden="true"> · </span>Utviklet i Seljord</p>
+    </div>
+    <div class="hero__visual">
+      <div class="frame "><div class="frame__bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame__url">Atlas Studio · ferdig bilde</span></div><picture><source type="image/webp" srcset="/assets/img/rom-render.webp"><img src="/assets/img/rom-render.jpg" width="1600" height="875" alt="Bilde laget i Atlas Studio: en stue med lys vegg og to vinduer til venstre, og en mørk grønn fondvegg med hvit dør til høyre." fetchpriority="high" decoding="async"></picture></div>
+      <div class="bomcard" aria-hidden="true">
+  <div class="bomcard__head"><span>Materialliste</span><span class="mono">Stue · 4,20 × 5,00 m</span></div>
+  <ul><li><i class="dot" style="background:#F3F1EA"></i><span class="bom__name">Veggmaling<small class="mono">NCS S 0502-Y</small></span><span class="bom__qty mono">7,7 liter</span><span class="bom__pack">1 × spann à 10 liter</span><span class="bom__ok">Kan bestilles</span></li><li><i class="dot" style="background:#4f6b62"></i><span class="bom__name">Veggmaling<small class="mono">NCS S 5608-B78G</small></span><span class="bom__qty mono">2,7 liter</span><span class="bom__pack">6 × 0,5 liter</span><span class="bom__ok">Kan bestilles</span></li></ul>
+  <p class="bomcard__foot">Dør og vinduer er trukket fra veggflaten.</p>
+</div>
+    </div>
+  </div>
+</section>
+<div class="wrap">
+  <div class="stats">
+    <div class="stat stat--big"><span class="stat__num">760&nbsp;000+</span><span class="stat__label">byggevarer i katalogen, hentet fra NOBB</span></div>
+    <ul class="stat-points">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6v12M7 6v12M10.5 6v12M13 6v12M16.5 6v12M20 6v12"/><path d="M2.5 3.5h3M18.5 3.5h3M2.5 20.5h3M18.5 20.5h3"/></svg><span><strong>Eksakt kode gir eksakt vare</strong>Navn, NOBB-nummer, strekkode eller leverandørnummer</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg><span><strong>Hele pakninger</strong>Mengder rundes opp til det kunden faktisk kan kjøpe</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.8"/><path d="M21 16l-5.5-5.5L5 20"/></svg><span><strong>Bilde av rommet</strong>Planlegg i 2D og 3D, og lag et fotorealistisk bilde</span></li>
+    </ul>
+  </div>
+</div>
+<section class="section" aria-labelledby="hva">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Hva Atlas gjør</p>
+      <h2 id="hva">Alt den ansatte trenger, samlet i én assistent</h2>
+      <p>Atlas er laget for butikkgulvet: korte spørsmål, travle dager og kunder som vil ha et svar de kan stole på.</p>
+    </div>
+    <div class="grid grid--3">
+      <article class="card "><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path d="M8.5 8.5h7M8.5 11.5h4.5"/></svg></div><h3>Samtale som forstår prosjektet</h3><p>Kunden skal male stua eller bygge terrasse? Atlas forstår oppgaven, foreslår varene som trengs og regner mengdene ut fra målene kunden oppgir.</p><a class="more" href="/atlas/#samtale">Les mer →</a></article>
+      <article class="card "><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg></div><h3>Søk på navn og kode</h3><p>Finn varen på navn, NOBB-nummer, strekkode (GTIN/EAN) eller leverandørens artikkelnummer. En eksakt kode gir alltid eksakt vare — aldri «nærmeste».</p><a class="more" href="/atlas/#sok">Les mer →</a></article>
+      <article class="card "><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div><h3>Produktpass</h3><p>Én side per vare: mål, varianter, pakninger og dokumentasjon som FDV, sikkerhetsdatablad og monteringsanvisning — med kilden oppgitt.</p><a class="more" href="/atlas/#produktpass">Les mer →</a></article>
+      <article class="card "><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 20V8l9-5 9 5v12"/><path d="M3 20h18M9 20v-6h6v6"/></svg></div><h3>Atlas Studio</h3><p>Tegn rommet med egne mål, legg varer fra katalogen på vegger og gulv, sett inn dører, vinduer og møbler — og få materialliste og et fotorealistisk bilde.</p><a class="more" href="/studio/">Utforsk Studio →</a></article>
+      <article class="card "><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6v12M7 6v12M10.5 6v12M13 6v12M16.5 6v12M20 6v12"/><path d="M2.5 3.5h3M18.5 3.5h3M2.5 20.5h3M18.5 20.5h3"/></svg></div><h3>Skann strekkoden</h3><p>I iPhone-appen, som er under utvikling, skanner du strekkoden på hyllen eller pakken og får produktpasset til nøyaktig den varen.</p><a class="more" href="/atlas/#iphone">Les mer →</a></article>
+      <article class="card "><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l7.5 3v6c0 4.4-3.2 7.9-7.5 9-4.3-1.1-7.5-4.6-7.5-9V6z"/><path d="M8.8 12.2l2.2 2.2 4.4-4.6"/></svg></div><h3>Ærlig om usikkerhet</h3><p>Farger vises bare fra dokumentert fargekode og merkes «omtrentlig». Det som er illustrasjon, står tydelig som illustrasjon.</p><a class="more" href="#aerlig">Les mer →</a></article>
+    </div>
+  </div>
+</section>
+<section class="section section--soft" aria-labelledby="slik">
+  <div class="wrap">
+    <div class="section-head section-head--center">
+      <p class="eyebrow">Slik virker det</p>
+      <h2 id="slik">Fra kundens spørsmål til ferdig handleliste</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Kunden forteller</h3><p>Den ansatte skriver inn spørsmålet eller slår opp varen kunden har med seg.</p></li>
+      <li><h3>Atlas forstår oppgaven</h3><p>Atlas leser hva som skal gjøres og hvor, og finner varene i katalogen.</p></li>
+      <li><h3>Mengder og pakninger</h3><p>Mengdene regnes ut fra målene kunden oppgir og rundes opp til hele pakninger.</p></li>
+      <li><h3>Vis resultatet</h3><p>I Atlas Studio ser kunden rommet i 2D, 3D og som fotorealistisk bilde.</p></li>
+    </ol>
+  </div>
+</section>
+<section class="band--blue blueprint" aria-labelledby="studio-h">
+  <div class="wrap">
+    <div class="feature feature--media">
+      <div class="feature__text">
+        <p class="eyebrow">Atlas Studio</p>
+        <h2 id="studio-h">Vis kunden rommet før første strøk</h2>
+        <p>Her er en stue på 4,20 × 5,00 meter i Atlas Studio: to malinger fra katalogen, en innerdør og to vinduer med sine egne mål. Til høyre står flatene med mål og det ferdige bildet av rommet.</p>
+        <ul class="checks">
+          <li>Rommets egne mål — aldri gjettet fra produktnavn</li>
+          <li>Varer fra katalogen på vegger, gulv, dører og vinduer</li>
+          <li>Materialliste med mengder og hele pakninger</li>
+        </ul>
+        <div class="actions"><a class="btn btn--yellow" href="/studio/">Utforsk Atlas Studio<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <figure class="showcase">
+        <div class="frame frame--flat"><div class="frame__bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame__url">Atlas Studio</span></div><picture><source type="image/webp" srcset="/assets/img/studio-3d.webp"><img src="/assets/img/studio-3d.jpg" width="1600" height="1056" alt="Atlas Studio i nettleseren: rommet vist innenfra i 3D med lys vegg, to vinduer og grønn fondvegg med dør. Til høyre står rommets flater med mål og det ferdige bildet." loading="lazy" decoding="async"></picture></div>
+        <figcaption class="showcase__tag">
+          <strong>Fargene kommer fra varenes egne data</strong>
+          <span class="swatches">
+            <span class="swatch"><i style="background:#F3F1EA"></i>NCS S 0502-Y</span>
+            <span class="swatch"><i style="background:#4f6b62"></i>NCS S 5608-B78G</span>
+          </span>
+          <span class="tag-note">Vist som omtrentlig farge — en skjerm er ikke en fargeprøve.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<section class="section" aria-labelledby="pass-h">
+  <div class="wrap">
+    <div class="feature feature--wide">
+      <div class="feature__text">
+        <p class="eyebrow">Produktpass</p>
+        <h2 id="pass-h">Svaret på «hva er dette for en vare?»</h2>
+        <p>Skriv eller skann en kode, så åpner Atlas produktpasset for nøyaktig den varen: leverandør, varegruppe, pakninger med strekkode, egenskaper og dokumentene som hører til.</p>
+        <ul class="checks">
+          <li>Eksakt kode gir eksakt vare, og en ukjent kode sier ærlig fra</li>
+          <li>FDV, sikkerhetsdatablad og monteringsanvisning der de finnes</li>
+          <li>Hver egenskap viser hvor opplysningen kommer fra</li>
+        </ul>
+      </div>
+      <figure><div class="frame frame--flat"><div class="frame__bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame__url">Atlas · produktpass</span></div><picture><source media="(max-width: 560px)" type="image/webp" srcset="/assets/img/produktpass-mobil.webp" width="780" height="629"><source media="(max-width: 560px)" srcset="/assets/img/produktpass-mobil.jpg" width="780" height="629"><source type="image/webp" srcset="/assets/img/produktpass.webp"><img src="/assets/img/produktpass.jpg" width="1100" height="420" alt="Toppen av produktpasset i Atlas for en gulvsponplate: varenavn, NOBB-nummer 2231 0718, leverandør, varegruppe, prisenhet, lagerstatus og leverandørens artikkelnummer." loading="lazy" decoding="async"></picture></div>
+        <figcaption>Oppslag på NOBB-nummer 2231 0718 med ekte katalogdata. Varen har ikke bilde i katalogen, så Atlas viser en nøytral figur. <a class="zoom" href="/assets/img/produktpass.jpg">Åpne bildet i full størrelse ↗</a></figcaption></figure>
+    </div>
+    <div class="feature feature--stack">
+      <div class="feature__text">
+        <p class="eyebrow">Mengder</p>
+        <h2>Regnestykket vises, ikke bare svaret</h2>
+        <p>Materiallisten viser hvordan hver mengde er regnet: flate, antall strøk, forbruk per liter og hva som er trukket fra for dører og vinduer. Mengden rundes opp til hele pakninger, og linjer som ikke kan bestilles ennå, merkes tydelig.</p>
+      </div>
+      <figure><div class="frame frame--flat"><div class="frame__bar" aria-hidden="true"><i></i><i></i><i></i><span class="frame__url">Atlas Studio · materialliste</span></div><picture><source media="(max-width: 560px)" type="image/webp" srcset="/assets/img/materialliste-mobil.webp" width="780" height="726"><source media="(max-width: 560px)" srcset="/assets/img/materialliste-mobil.jpg" width="780" height="726"><source type="image/webp" srcset="/assets/img/materialliste.webp"><img src="/assets/img/materialliste.jpg" width="1400" height="420" alt="Materiallisten i Atlas Studio: veggmaling NCS S 0502-Y, 7,7 liter, 1 spann à 10 liter, «Kan bestilles»; grunning, 3,1 liter, «Uavklart – velg eller oppdater varen»; grønn veggmaling, 2,7 liter, 6 stk à 0,5 liter, «Kan bestilles»." loading="lazy" decoding="async"></picture></div>
+        <figcaption>Grunningen står som «Uavklart» til en bestemt grunning er valgt — Atlas merker den aldri som klar til bestilling på et gjettet grunnlag. <a class="zoom" href="/assets/img/materialliste.jpg">Åpne bildet i full størrelse ↗</a></figcaption></figure>
+    </div>
+  </div>
+</section>
+<section class="section section--soft" id="aerlig" aria-labelledby="aerlig-h">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Ærlighet</p>
+      <h2 id="aerlig-h">Atlas sier fra når den ikke vet</h2>
+      <p>En assistent i butikken må være til å stole på. Derfor viser Atlas hva som er dokumentert, hva som er omtrentlig og hva som bare er en illustrasjon.</p>
+    </div>
+    <div class="honest">
+      <article class="card"><span class="badge badge--blue">omtrentlig</span><h3>Farger fra dokumentert kode</h3><p>En farge vises bare når varen selv oppgir en fargekode (for eksempel NCS eller RAL). Den merkes alltid som omtrentlig.</p></article>
+      <article class="card"><span class="badge badge--warn">Illustrasjon</span><h3>Illustrasjon er merket</h3><p>Mangler vi en tro gjengivelse av varen, viser Studio en nøytral flate med merket «Illustrasjon» — aldri et bilde som later som det er produktet.</p></article>
+      <article class="card"><span class="badge badge--ok">fagperson</span><h3>Et hjelpemiddel, ikke en fasit</h3><p>Atlas støtter den ansatte. Bæring, våtrom, brann, elektro og andre kritiske forhold skal alltid bekreftes av en fagperson.</p></article>
+    </div>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="cta blueprint">
+      <div>
+        <h2>Vil du se Atlas i bruk?</h2>
+        <p>Vi viser gjerne hvordan Atlas kan hjelpe ansatte i din butikk eller kjede. Send oss en e-post, så tar vi en prat.</p>
+        <div class="actions">
+          <a class="btn btn--yellow" href="mailto:post@impentech.onmicrosoft.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>Send oss en e-post</a>
+          <a class="btn btn--ghost" href="/kontakt/">Se kontaktinfo</a>
+        </div>
+      </div>
+      <div class="cta__art float"><picture><source type="image/webp" srcset="/assets/img/atlas-snekker.webp"><img src="/assets/img/atlas-snekker.png" width="560" height="415" alt="" role="presentation" loading="lazy" decoding="async"></picture></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/"><svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="1" y="1" width="38" height="38" rx="10" fill="#fff"/><path d="M9 15V9h6M31 25v6h-6" fill="none" stroke="#1340a8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="17" y="11" width="6" height="18" rx="1.5" fill="#0c2c78"/><circle cx="29.5" cy="10.5" r="2.6" fill="#ffd23f"/></svg><span class="brand__text"><span class="brand__name">Impen Tech AS</span></span></a>
+        <p>Impen Tech AS utvikler Atlas — en digital assistent som hjelper ansatte i byggevarehandelen å finne riktig vare, regne riktig mengde og vise kunden resultatet.</p>
+      </div>
+      <div><h2>Produkt</h2><ul><li><a href="/atlas/">Atlas</a></li><li><a href="/studio/">Atlas Studio</a></li></ul></div>
+      <div><h2>Selskap</h2><ul><li><a href="/om/">Om Impen Tech</a></li><li><a href="/kontakt/">Kontakt</a></li></ul></div>
+      <div><h2>Hjelp</h2><ul><li><a href="/support/">Brukerstøtte</a></li><li><a href="/personvern/">Personvern</a></li></ul></div>
+      <div class="footer-mail"><h2>E-post</h2><a href="mailto:post@impentech.onmicrosoft.com">post@impentech.onmicrosoft.com</a></div>
+    </div>
+    <div class="footer-legal">
+      <span>© 2026 Impen Tech AS · Org.nr. <span class="mono">937 984 626</span></span>
+      <span>Meåsvegen 9, 3840 Seljord</span>
+    </div>
+    <p class="footer-small">Produktdata i Atlas kommer fra NOBB, byggenæringens produktdatabase (Byggtjeneste). Produktnavn og varemerker som vises i skjermbildene tilhører sine respektive eiere. Denne nettsiden bruker ingen informasjonskapsler og ingen sporing.</p>
+  </div>
+</footer>
 </body>
 </html>
